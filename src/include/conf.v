@@ -1,4 +1,9 @@
 ///////////////////////////
+//    MAIN HEADER FILE   //
+//        FOR RTL        //
+///////////////////////////
+
+///////////////////////////
 // Configuration section //
 ///////////////////////////
 
@@ -8,7 +13,7 @@
 `define ISA_RV64I
 // `define ISA_RV64E
 
-/* Select extensions */
+/* Select extensions: */
 // None supported currently
 
 ///////////////////////////
@@ -36,4 +41,6 @@
 `define ISA_WIDTH 64
 `elsif ISA_BIT_32
 `define ISA_WIDTH 32
+`else
+`error "Error: Unsupported ISA word width"
 `endif
